@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Dyura Chats</title>
+</head>
+<body>
+	<form class="input" action="./chat" method="POST">
+		<label for="name">
+			<input type="text" value="" name="name" />
+		</label>
+		<label for="color">
+			<select id="color" name="color">
+			<% Object.keys(colorList).forEach(function(key){ %>
+				<option value="<%= key %>"><%= colorList[key] %></option>
+			<% }); %>
+			</select>
+		</label>
+		<input type="submit" value="チャットルームに入室" />
+	</form>
+</body>
+</html>

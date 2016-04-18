@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+	<link rel="stylesheet" href="<%= base_url %>chat.min.css">
+	<script src="<%= socket_url %>socket.io/socket.io.js"></script>
+	<script>
+		var default_data = {
+			socket_url : '<%= socket_url %>',
+			username   : '<%= name %>',
+			color      : '<%= color %>'
+		};
+	</script>
+	<script src="<%= base_url %>dyura_chat.min.js"></script>
+	<title>Dyura Chat</title>
+</head>
+<body>
+<header>
+	<input type="text" name="message" />
+	<a href="#" id="send_message">POST!</a>
+</header>
+<article>
+	<section id="chat_body">
+	</section>
+</article>
+</body>
+</html>
